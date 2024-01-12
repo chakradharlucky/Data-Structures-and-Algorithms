@@ -64,6 +64,65 @@ public class LinkedList {
         this.length++;
     }
 
+    public void removeAtStart(){
+        if(this.head == null){
+            System.out.println("List is empty!! No node to remove");
+        }
+        else{
+            System.out.println("Value "+head.value+" removed");
+            this.head = head.next;
+            if(length == 1)
+                tail = null;
+            length--;
+        }
+    }
+    
+    public void removeAtEnd(){
+        if(this.head == null){
+            System.out.println("List is empty!! No node to remove");
+        }
+        else{
+            Node temp = this.head;
+            while (temp.next != tail) {
+                temp= temp.next;                
+            }
+            System.out.println("Value "+tail.value+" removed");
+            tail = temp;
+            tail.next = null;
+            if(length == 1)
+            {
+                head = tail = null;
+            }
+            length--;
+        }
+    }
+    
+    public void removeAtPosition(int position)
+    {
+        if(this.head == null){
+            System.out.println("List is empty!! No node to remove");
+        }
+        else if(position>this.length || position<0){
+            System.out.println("Position is out of range to remove a Node");
+        }
+        else{
+            if(position==0){
+                removeAtStart();
+            }
+            else{
+                Node tempRemove,tempPrevious = this.head;
+                for(int i=1;i<position;i++)
+                {
+                    tempPrevious = tempPrevious.next;
+                }
+                tempRemove = tempPrevious.next;
+                System.out.println("Value "+tempRemove.value+" removed");
+                tempPrevious.next = tempRemove.next;
+                this.length--;
+            }
+        }
+    }
+
     public int listLength(){
         return this.length;
     }
@@ -84,20 +143,38 @@ public class LinkedList {
         LinkedList list2 = new LinkedList();
     //LIST - 1 
         // Appending nodes at various positions
+        System.out.print("\nList 1: ");
         list1.appendAtStart(10);
         list1.appendAtEnd(30);
         list1.appendAtPosition(20, 1);
-        System.out.print("List 1: ");
+        list1.appendAtStart(5);
+        list1.appendAtEnd(50);
+        list1.appendAtPosition(40, 4);
+        list1.printList();
+        System.out.println("Length of the list: "+list1.listLength());
+        // Removing nodes from at various positions
+        list1.removeAtStart();
+        list1.removeAtEnd();
+        list1.removeAtPosition(1);
+        System.out.print("\nAfter Remove list - 1: ");
         list1.printList();
         System.out.println("Length of the list: "+list1.listLength());
         
-    //LIST - 2    
+        
+        //LIST - 2    
         // Appending nodes at various positions
+        System.out.print("\nList 2: ");
         list2.appendAtEnd(1);
         list2.appendAtStart(3);
         list2.appendAtPosition(2, 1);
-        System.out.print("List 2: ");
         list2.printList();
+        System.out.println("Length of the list: "+list2.listLength());
+        // Removing nodes from at various positions
+        list2.removeAtStart();
+        list2.removeAtEnd();
+        list2.removeAtPosition(0);
+        System.out.print("\nAfter Remove list - 2: ");
+        list1.printList();
         System.out.println("Length of the list: "+list2.listLength());
 
     }
