@@ -1,10 +1,11 @@
-import java.util.*;
 public class LinkedList {
 
     private Node head;
     private Node tail;
     private int length = 0;
+
     public class Node{
+
         int value;
         Node next = null;
         public Node(int value)
@@ -21,6 +22,7 @@ public class LinkedList {
         }
         System.out.println();
     }
+
     public void appendAtStart(int value){
         Node newNode = new Node(value);
         if(this.tail==null && this.head == null){
@@ -61,9 +63,11 @@ public class LinkedList {
         }
         this.length++;
     }
+
     public int listLength(){
         return this.length;
     }
+
     public LinkedList(){
         this.head = null;
         this.tail = null;
@@ -78,12 +82,17 @@ public class LinkedList {
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
+    //LIST - 1 
+        // Appending nodes at various positions
         list1.appendAtStart(10);
         list1.appendAtEnd(30);
         list1.appendAtPosition(20, 1);
         System.out.print("List 1: ");
         list1.printList();
         System.out.println("Length of the list: "+list1.listLength());
+        
+    //LIST - 2    
+        // Appending nodes at various positions
         list2.appendAtEnd(1);
         list2.appendAtStart(3);
         list2.appendAtPosition(2, 1);
