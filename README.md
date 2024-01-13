@@ -4,7 +4,7 @@ Welcome to the repository dedicated to learning and implementing data structures
 ## Table of Contents
 1. Data Structures
 - [Arrays](data-structures\arrays)
-- [Linked Lists](data-structures\Linked-list)
+- [Linked Lists](data-structures/Linked-list)
 - [Stacks](data-structures\stacks)
 - [Queues](data-structures\queues)
 - [Trees](data-structures\trees)
