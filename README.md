@@ -3,13 +3,13 @@ Welcome to the repository dedicated to learning and implementing data structures
 
 ## Table of Contents
 1. Data Structures
-- [Arrays](data-structures/arrays)
-- [Linked Lists](data-structures/Linked-list)
-- [Stacks](data-structures/stacks)
-- [Queues](data-structures/queues)
-- [Trees](data-structures/trees)
-- [Graphs](data-structures/graphs)
-- [Hash Tables](data-structures/hash-tables)
+- [Arrays](#arrays)
+- [Linked Lists](Linked-list)
+- [Stacks](#usage)
+- [Queues](#configuration)
+- [Trees](#contributing)
+- [Graphs](#license)
+- [Hash Tables](#credits)
 2. Algorithms
 - [Searching and Sorting](algorithms/searching-and-sorting)
 - [Recursion](algorithms/recursion)
