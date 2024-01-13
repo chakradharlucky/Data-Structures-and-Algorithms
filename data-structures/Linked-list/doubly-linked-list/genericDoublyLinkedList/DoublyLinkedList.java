@@ -38,6 +38,7 @@ public class DoublyLinkedList< type > {
             for(int i=1;i<position;i++){
                 temp = temp.next;
             }
+            newNode.previous = temp;
             length++;
         }
     }
