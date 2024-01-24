@@ -3,7 +3,7 @@ Welcome to the repository dedicated to learning and implementing data structures
 
 ## Table of Contents
 1. Data Structures
-- [Arrays](data-structures\arrays)
+- [Arrays](data-structures/arrays)
 - [Linked Lists](data-structures/Linked-list)
   1. - [Singly linked list](data-structures/Linked-list/single-linked-list)
   2. - [Doubly linked list](data-structures/Linked-list/doubly-linked-list)
