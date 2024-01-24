@@ -10,7 +10,7 @@ Welcome to the repository dedicated to learning and implementing data structures
 - [Stacks](data-structures\stacks)
 - [Queues](data-structures\queues)
 - [Trees](data-structures\trees)
-- [Graphs](data-structures\graphs)
+- [Graphs](data-structures/graphs)
 - [Hash Tables](data-structures\hash-tables)
 2. Algorithms
 - [Searching and Sorting](algorithms/searching-and-sorting)
