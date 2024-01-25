@@ -30,16 +30,19 @@ public class DoublyLinkedList< type > {
 
     public void appendAtPosition(type value,int position)
     {
-        if(position <= 0) appendAtStart(value);
-        else if(position >= length ) appendAtEnd(value);
+        if(position <= 1) appendAtStart(value);
+        else if(position > length ) appendAtEnd(value);
         else{
             Node newNode = new Node(value);
             Node temp = this.head;
             for(int i=1;i<position;i++){
                 temp = temp.next;
             }
-            newNode.previous = temp;
-            length++;
+            temp.previous.next = newNode;
+            newNode.previous = temp.previous;
+            temp.previous = newNode;
+            newNode.next = temp;
+            this.length++;
         }
     }
 
@@ -56,6 +59,35 @@ public class DoublyLinkedList< type > {
             this.tail = newNode;
         }
         this.length++;
+    }
+
+    public void removeAtStart(){
+        Node temp = this.head;
+        this.head = temp.next;
+        this.head.previous = null;
+        temp.next = null;
+        System.out.println(temp.value+" removed from starting of the list");
+        temp = null;
+    }
+    
+    public void removeAtPosition(int position)
+    {
+        Node temp = this.head;
+        for(int i=1 ;i<position;i++)
+        temp = temp.next;
+        temp.previous.next = temp.next;
+        temp.next.previous = temp.previous;
+        System.out.println(temp.value+" removed from "+ position +" positions of the list");
+        temp.next = temp.previous = null;
+    }
+    
+    public void removeAtEnd(){
+        Node temp = this.tail; // or traverse to the end of the list,loop conditon temp.next!=null;
+        this.tail = temp.previous;
+        temp.previous = null;
+        tail.next = null;
+        System.out.println(temp.value+" removed from end of the list");
+        temp = null;
     }
 
     public void printList(){
