@@ -34,9 +34,12 @@ int arrayLength = numbers.length;
 ## Arrays and Loops:
 * Iterating Through Elements:
 Arrays are often used in loops to iterate through each element.  
-Example:   *for (int i = 0; i < numbers.length; i++) {  
+Example:
+``` java
+for (int i = 0; i < numbers.length; i++) {  
  System.out.println(numbers[i]);  
-}* 
+}
+``` 
 
 ## Arrays and Methods:
 1. Passing to Methods:  
