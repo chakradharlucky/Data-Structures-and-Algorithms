@@ -99,6 +99,10 @@ public class DoublyLinkedList< type > {
         System.out.println();
     }
 
+    public int listLength(){
+        return this.length;
+    }
+
    public DoublyLinkedList(type value){
         Node newNode = new Node(value);
         this.head = this.tail = newNode;

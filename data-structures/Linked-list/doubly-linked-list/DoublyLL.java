@@ -10,11 +10,13 @@ public class DoublyLL {
         list.appendAtPosition(50, 4);
         System.out.print("List: ");
         list.printList();
+        System.out.println("Length of the list: "+list.listLength());
         System.out.println("Remove Operations: ");
         list.removeAtStart();
         list.removeAtEnd();
         list.removeAtPosition(3);
         System.out.print("List: ");
         list.printList();
+        System.out.println("Length of the list: "+list.listLength());
     }
 }
