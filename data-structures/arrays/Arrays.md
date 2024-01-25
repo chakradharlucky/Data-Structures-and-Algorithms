@@ -1,4 +1,4 @@
-# ARRAYS
+# ARRAYS 
 In Java, an array is a data structure that allows you to store multiple values of the same type under a single variable name. Arrays are used to group elements of the same data type together, and each element in the array can be accessed by its index. Here are some key points about arrays in Java:
 ## Declaration and Initialization:
 1. ### Declaration:
