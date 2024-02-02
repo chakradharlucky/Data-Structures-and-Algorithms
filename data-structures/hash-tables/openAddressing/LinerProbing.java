@@ -10,17 +10,18 @@ public class LinerProbing {
     }
 
     void insert(int value){        
-        int key = hashFunction(value);
+        int key = hashFunction(value),i;
         if(state[key] == 0 || state[key] == -1){
             hashtable[key] = value;
             state[key] = 1;
             count[key]++;
         }
         else {
-            for(int i=1;(i<this.hashsize) && (state[key] == 1);i++){
+            for(i=1;(i<this.hashsize) && (state[key] == 1);i++){
                 if(hashtable[key] != value)
                     key = hashFunction(value+i);
             }
+            if(i<this.hashsize)
                 hashtable[key] = value;
                 state[key] = 1;
                 count[key]++;
@@ -88,19 +89,11 @@ public class LinerProbing {
     }
 
     public static void main(String[] args) {
-        LinerProbing hashmap = new LinerProbing(5);
+        LinerProbing hashmap = new LinerProbing(10);
         hashmap.insert(3);
         hashmap.insert(1);
         hashmap.insert(6);
-        hashmap.insert(5);
-        hashmap.insert(5);
-        hashmap.insert(5);
-        hashmap.insert(9);
-        hashmap.insert(9); 
-        hashmap.insert(6);
-        hashmap.insert(1);
-        hashmap.insert(3);
-        hashmap.insert(4);
+       
         hashmap.print();
     }
 }
