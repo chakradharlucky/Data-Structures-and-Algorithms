@@ -32,9 +32,15 @@ public class LinerProbing {
                 for(i=0;(i<hashsize)&&(state[key]==1);i++){
                     key = hashFunction(value+i);
                 }
-                hashtable[key] = value;
-                state[key] = 1;
-                count[key]++;
+                if(i<hashsize)
+                {
+                    hashtable[key] = value;
+                    state[key] = 1;
+                    count[key]++;
+                }
+                else{
+                    System.out.println(value+" Hash table full");
+                }
             }
         }
     }
@@ -61,30 +67,23 @@ public class LinerProbing {
     }
 
     void delete(int value){
-        int key = hashFunction(value);
         if(noOfElements(count) == 0){
             System.out.println("Hash Table empty!!");
-         }
-        else if(search(value)) // search()+
-        {
-            count[key]--;
-            if(count[key] == 0)
-                state[key] = -1;
-            flg = true;
         }
-        else{
-            for(int i=1;(i<hashsize) && (state[key] != 0);i++)
+        else {
+        int key = hashFunction(value);
+            for(int i=0;i<hashsize;i++)
             {
                 if(hashtable[key] == value)
                 {
                     count[key]--; 
                     if(count[key] == 0)
                         state[key] = -1;
-                    flg = true;
+                    break;
                 }
+                key = hashFunction(value + i);
             }
         }
-        System.out.println((flg)? key:"Not found");
     }
 
     int noOfElements(int array[]){
@@ -109,8 +108,16 @@ public class LinerProbing {
         hashmap.insert(4);
         hashmap.insert(1);
         hashmap.insert(5);
+        hashmap.insert(5);
         hashmap.insert(2);
-       
+        
         hashmap.print();
+        hashmap.delete(5);
+        System.out.println("after delete");
+        // hashmap.insert(2);
+        hashmap.print();
+
+
+    
     }
 }
