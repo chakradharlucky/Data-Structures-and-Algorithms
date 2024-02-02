@@ -11,22 +11,32 @@ public class LinerProbing {
 
     void insert(int value){        
         int key = hashFunction(value),i;
-        if(state[key] == 0 || state[key] == -1){
+        if(state[key] == 0){
             hashtable[key] = value;
             state[key] = 1;
             count[key]++;
         }
-        else {
-            for(i=1;(i<this.hashsize) && (state[key] == 1);i++){
-                if(hashtable[key] != value)
+        else{
+            if(search(value))
+            {
+                for(i=0;;i++){
+                    if(hashtable[key]==value)
+                    {
+                        count[key]++;
+                        break;
+                    }
                     key = hashFunction(value+i);
+                }
             }
-            if(i<this.hashsize)
+            else{
+                for(i=0;(i<hashsize)&&(state[key]==1);i++){
+                    key = hashFunction(value+i);
+                }
                 hashtable[key] = value;
                 state[key] = 1;
                 count[key]++;
+            }
         }
-
     }
 
     boolean search(int value){
@@ -44,6 +54,7 @@ public class LinerProbing {
             {
                 if(hashtable[key] == value)
                 return true;
+                key = hashFunction(value+i);
             }
         }
         return false;
@@ -51,12 +62,14 @@ public class LinerProbing {
 
     void delete(int value){
         int key = hashFunction(value);
-        boolean flg = false;
-        if(state[key] == 0){ }
-        else if(state[key]==1 && hashtable[key] == value)
+        if(noOfElements(count) == 0){
+            System.out.println("Hash Table empty!!");
+         }
+        else if(search(value)) // search()+
         {
-            state[key] = -1;
             count[key]--;
+            if(count[key] == 0)
+                state[key] = -1;
             flg = true;
         }
         else{
@@ -64,8 +77,9 @@ public class LinerProbing {
             {
                 if(hashtable[key] == value)
                 {
-                    state[key] = -1;
                     count[key]--; 
+                    if(count[key] == 0)
+                        state[key] = -1;
                     flg = true;
                 }
             }
@@ -89,10 +103,13 @@ public class LinerProbing {
     }
 
     public static void main(String[] args) {
-        LinerProbing hashmap = new LinerProbing(10);
+        LinerProbing hashmap = new LinerProbing(5);
+        hashmap.insert(9);
         hashmap.insert(3);
+        hashmap.insert(4);
         hashmap.insert(1);
-        hashmap.insert(6);
+        hashmap.insert(5);
+        hashmap.insert(2);
        
         hashmap.print();
     }
