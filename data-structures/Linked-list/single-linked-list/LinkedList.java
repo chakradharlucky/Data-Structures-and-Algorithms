@@ -123,6 +123,25 @@ public class LinkedList {
         }
     }
 
+    public static LinkedList mergeSort(LinkedList list1,LinkedList list2){
+        LinkedList obj = new LinkedList();
+        obj.head= mergeSort(list1.head, list2.head);
+        return obj;
+    }
+    public static Node mergeSort(Node list1,Node list2){
+        if(list1.next == null )
+            return list2;
+        if(list2.next == null)
+            return list1;
+        if(list1.value < list2.value)
+        {
+            list1.next = mergeSort(list1.next,list2);
+            return list1;
+        }
+            list2.next = mergeSort(list1, list2.next);
+            return list2;
+    }
+
     public int listLength(){
         return this.length;
     }
@@ -141,7 +160,7 @@ public class LinkedList {
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
-    //LIST - 1 
+        //LIST - 1 
         // Appending nodes at various positions
         System.out.print("\nList 1: ");
         list1.appendAtStart(10);
@@ -167,15 +186,20 @@ public class LinkedList {
         list2.appendAtEnd(1);
         list2.appendAtStart(3);
         list2.appendAtPosition(2, 1);
+        list2.appendAtEnd(4);
+        list2.appendAtEnd(5);
+        list2.appendAtEnd(6);
         list2.printList();
-        System.out.println("Length of the list: "+list2.listLength());
+        System.out.println("Length of the list: "+list1.listLength());
         // Removing nodes from at various positions
         list2.removeAtStart();
         list2.removeAtEnd();
         list2.removeAtPosition(0);
         System.out.print("\nAfter Remove list - 2: ");
-        list1.printList();
-        System.out.println("Length of the list: "+list2.listLength());
+        list2.printList();
+        System.out.println("Length of the list: "+list2.listLength()); 
+        LinkedList mergList = mergeSort(list1, list2);
+        mergList.printList();
 
     }
 }

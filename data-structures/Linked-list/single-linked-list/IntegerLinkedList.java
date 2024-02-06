@@ -17,6 +17,9 @@ public class IntegerLinkedList {
         int_list.removeAtPosition(1);
         System.out.print("\nAfter Remove list - 1: ");
         int_list.printList();
+        int_list.reverseList();
+        System.out.println("Reverse List: ");
+        int_list.printList();
         System.out.println("Length of the list: "+int_list.listLength());
     }
 }

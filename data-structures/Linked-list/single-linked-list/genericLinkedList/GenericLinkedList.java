@@ -5,6 +5,8 @@ public class GenericLinkedList< type >{
     private Node head;
     private Node tail;
     private int length = 0;
+    public Object next;
+    public Object node;
 
     public class Node{
 
@@ -123,6 +125,18 @@ public class GenericLinkedList< type >{
                 this.length--;
             }
         }
+    }
+    public void reverseList(){
+        this.head = reverseList(this.head);
+    }
+
+    public Node reverseList(Node head){
+        if(head.next==null)
+         return head;
+        Node revhead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return revhead;
     }
 
     public int listLength(){
