@@ -5,8 +5,8 @@ Welcome to the repository dedicated to learning and implementing data structures
 1. Data Structures
 - [Arrays](data-structures/arrays)
 - [Linked Lists](data-structures/Linked-list)
-  1. - [Singly linked list](data-structures/Linked-list/single-linked-list)
-  2. - [Doubly linked list](data-structures/Linked-list/doubly-linked-list)
+  1.  [Singly linked list](data-structures/Linked-list/single-linked-list)
+  2.  [Doubly linked list](data-structures/Linked-list/doubly-linked-list)
 - [Stacks](data-structures/stacks)
 - [Queues](data-structures/queues)
 - [Trees](data-structures/trees)
