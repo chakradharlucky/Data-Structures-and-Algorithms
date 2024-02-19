@@ -12,7 +12,7 @@ Welcome to the repository dedicated to learning and implementing data structures
 - [Trees](data-structures/trees)
 - [Graphs](data-structures/graphs)
 - [Hash Tables](data-structures/hash-tables)
-- [Java Collection fram Wokers]()
+- [Java Collection framework]()
 2. Algorithms
 - [Searching and Sorting](algorithms/searching-and-sorting)
 - [Recursion](algorithms/recursion)
