@@ -11,8 +11,8 @@
 - **Map:** An object that maps keys to values. Implementations include HashMap, TreeMap, and LinkedHashMap.
 ## Classes
 - **[ArrayList:](ArrayList)** Implements the List interface using a dynamic array. It is resizable and allows fast random access to elements.
-- **LinkedList:** Implements the List interface using a doubly-linked list. It provides efficient insertion and deletion operations.
-- **HashSet:** Implements the Set interface using a hash table. It does not allow duplicate elements.
-- **TreeSet:** Implements the Set interface using a red-black tree. It provides elements in sorted order.
-- **HashMap:** Implements the Map interface using a hash table for key-value pairs. It allows null keys and values.
-- **TreeMap:** Implements the Map interface using a red-black tree. It provides key-value pairs in sorted order.
+- **[LinkedList:](LinkedList)** Implements the List interface using a doubly-linked list. It provides efficient insertion and deletion operations.
+- **[HashSet:](HashSet)** Implements the Set interface using a hash table. It does not allow duplicate elements.
+- **[TreeSet:](TreeSet)** Implements the Set interface using a red-black tree. It provides elements in sorted order.
+- **[HashMap:](HashMap)** Implements the Map interface using a hash table for key-value pairs. It allows null keys and values.
+- **[TreeMap:](TreeMap)** Implements the Map interface using a red-black tree. It provides key-value pairs in sorted order.
