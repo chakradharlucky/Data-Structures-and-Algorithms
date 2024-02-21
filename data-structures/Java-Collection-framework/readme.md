@@ -10,7 +10,7 @@
 - **Queue:** A collection designed for holding elements prior to processing. Common implementations are LinkedList and PriorityQueue.
 - **Map:** An object that maps keys to values. Implementations include HashMap, TreeMap, and LinkedHashMap.
 ## Classes
-- **ArrayList:** Implements the List interface using a dynamic array. It is resizable and allows fast random access to elements.
+- **[ArrayList:](data-structures/Java-Collection-framework/ArrayList)** Implements the List interface using a dynamic array. It is resizable and allows fast random access to elements.
 - **LinkedList:** Implements the List interface using a doubly-linked list. It provides efficient insertion and deletion operations.
 - **HashSet:** Implements the Set interface using a hash table. It does not allow duplicate elements.
 - **TreeSet:** Implements the Set interface using a red-black tree. It provides elements in sorted order.
