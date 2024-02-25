@@ -54,7 +54,7 @@ In order to add elements in the arraylist the following methods are going to use
     2. **void add(int index, E e)**  
     Element of type E  will be add at position index.
     ```java
-    arraylist.add(10); // arraylist is of integer type
+    arraylist.add(2,10); // arraylist is of integer type
     ```  
     3. **boolean addAll(Collection<? extends E> c)**  
     Add All Elements from Another Collection  
