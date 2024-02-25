@@ -83,3 +83,21 @@ In order to add elements in the arraylist the following methods are going to use
     // Insert all elements from moreFruits at index 1
     fruits.addAll(1, moreFruits);
     ```
+3. **Accessing elements:**  
+    You can access elements using the 'get()' method. Keep in mind that indexing starts from 0(may it can throw indexOutOfBoundExpection).  
+    In Java, the get() method is used to retrieve the element at a specified index from a collection that implements the List interface, such as ArrayList. The get() method is part of the List interface, and it allows you to access elements based on their position (index) in the list.
+    E get(int index)
+    ```java
+    int ele = arraylist.get(4);
+    ```  
+4. **boolean isEmpty()**  
+In Java, the isEmpty() method is used to check whether a collection is empty. The isEmpty() method is commonly used with collections that implement the Collection interface, such as ArrayList, LinkedList, HashSet, etc.  
+5. **object toArray()**  
+  
+6. **int lastIndexOf(object O)**  
+
+7.**object clone()**  
+    -- onces look at why clone() requried the type cast --  
+8.**boolean contains(object O)**  
+  
+9.
