@@ -9,7 +9,7 @@ Welcome to the repository dedicated to learning and implementing data structures
   2.  [Doubly linked list](data-structures/Linked-list/doubly-linked-list)
 - [Stacks](data-structures/stacks)
 - [Queues](data-structures/queues)
-- [Trees](data-structures/trees)
+- [Trees](dataStructures/trees)
 - [Graphs](data-structures/graphs)
 - [Hash Tables](data-structures/hash-tables)
 - [Java Collection framework](data-structures/Java-Collection-framework)
