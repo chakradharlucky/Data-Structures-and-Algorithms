@@ -1,4 +1,4 @@
-# Data Structures and Algorithms with Java
+# Data Structures and Algorithms
 Welcome to the repository dedicated to learning and implementing data structures and algorithms in Java! This comprehensive guide aims to help you understand fundamental concepts and improve your problem-solving skills.
 
 ## Table of Contents
